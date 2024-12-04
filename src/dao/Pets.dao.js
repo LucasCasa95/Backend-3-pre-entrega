@@ -21,4 +21,12 @@ export default class Pet {
     delete = (id) =>{
         return petModel.findByIdAndDelete(id);
     }
+
+    async insertMany(petsData) {
+        try {
+            return await petModel.insertMany(petsData); // Aquí se usa petModel
+        } catch (error) {
+            throw new Error('Error inserting pets: ' + error.message);
+        }
+    }
 }

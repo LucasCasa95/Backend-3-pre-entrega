@@ -8,6 +8,6 @@ router.get("/mockingpets", mocksController.getMockingPets)
 //Endpoint para obtener usuarios simulados
 router.get("/mockingusers", mocksController.getMockingUsers)
 //Endpoint para generar e insertar usuarios y mascotas
-router.post("/generateData")
+router.post("/generateData", mocksController.generateData)
 
 export default router
