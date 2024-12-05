@@ -12,8 +12,7 @@ const getMockingPets = async (req, res) => {
 }
 
 const generateData = async (req, res) => {
-    const users = parseInt(req.query.users) || 50; // Valores predeterminados
-    const pets = parseInt(req.query.pets) || 50;
+    const { users = 50, pets = 50 } = req.body
 
     try {
         if (users <= 0 || pets <= 0) {
